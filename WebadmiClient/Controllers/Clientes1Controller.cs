@@ -115,9 +115,9 @@ namespace WebadmiClient.Controllers
                 return HttpNotFound(); // Manejar el caso donde el cliente no es encontrado
             }
 
-            if (cliente.Saldo == 0)
+            if (cliente.Saldo == 0 || cliente.Saldo == null) // Agregar condición para permitir eliminar clientes con saldo 0 o saldo nulo
             {
-                cliente.Activo = false; // Cambiar el estado del cliente a inactivo
+                db.ModelsClients.Remove(cliente); // Eliminar el cliente de la base de datos
                 db.SaveChanges(); // Guardar los cambios en la base de datos
             }
             else
@@ -128,7 +128,7 @@ namespace WebadmiClient.Controllers
 
             return RedirectToAction("Index");
         }
-        
+
 
         protected override void Dispose(bool disposing)
         {
