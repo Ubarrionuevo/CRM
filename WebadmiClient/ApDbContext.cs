@@ -16,5 +16,6 @@ namespace WebadmiClient
             
         }
 
+        public System.Data.Entity.DbSet<WebadmiClient.Models.Cotizaciones> Cotizaciones { get; set; }
     }
 }

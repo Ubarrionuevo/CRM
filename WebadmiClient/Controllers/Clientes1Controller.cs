@@ -108,25 +108,30 @@ namespace WebadmiClient.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            var cliente = db.ModelsClients.Find(id); // Buscar al cliente por su Id en la base de datos
-
-            if (cliente == null)
             {
-                return HttpNotFound(); // Manejar el caso donde el cliente no es encontrado
+                var cliente = db.ModelsClients.Find(id); // Buscar al cliente por su Id en la base de datos
+
+                if (cliente == null)
+                {
+                    return HttpNotFound(); // Manejar el caso donde el cliente no es encontrado
+                }
+
+                if (cliente.Estado == false && (cliente.Saldo == 0 || cliente.Saldo == null)) // Agregar condición para permitir eliminar clientes con saldo 0 o saldo nulo y activo
+                {
+
+                    db.ModelsClients.Remove(cliente); // Eliminar el cliente de la base de datos
+                    db.SaveChanges(); // Guardar los cambios en la base de datos
+                }
+                else
+                {
+                   
+                    return View("Error"); // Renderizar una vista de error o manejarlo de acuerdo a tu lógica
+                }
+
+                return RedirectToAction("Index");
             }
 
-            if (cliente.Saldo == 0 || cliente.Saldo == null) // Agregar condición para permitir eliminar clientes con saldo 0 o saldo nulo
-            {
-                db.ModelsClients.Remove(cliente); // Eliminar el cliente de la base de datos
-                db.SaveChanges(); // Guardar los cambios en la base de datos
-            }
-            else
-            {
-                ViewBag.ErrorMessage = "No se puede dar de baja al cliente porque tiene un saldo pendiente."; // Mensaje de error
-                return View("Error"); // Renderizar una vista de error o manejarlo de acuerdo a tu lógica
-            }
-
-            return RedirectToAction("Index");
+           
         }
 
 

@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Clientes1Controller.cs" />
+    <Compile Include="Controllers\CotizacionesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MovimientoCuentas1Controller.cs" />
     <Compile Include="Global.asax.cs">
@@ -142,8 +143,13 @@
     <Compile Include="Migrations\202402160103016_SecondMigration.designer.cs">
       <DependentUpon>202402160103016_SecondMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403110240137_CRM.cs" />
+    <Compile Include="Migrations\202403110240137_CRM.designer.cs">
+      <DependentUpon>202403110240137_CRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\Cotizaciones.cs" />
     <Compile Include="Models\MovimientoCuenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -208,6 +214,11 @@
     <Content Include="Views\MovimientoCuentas1\Details.cshtml" />
     <Content Include="Views\MovimientoCuentas1\Edit.cshtml" />
     <Content Include="Views\MovimientoCuentas1\Index.cshtml" />
+    <Content Include="Views\Cotizaciones\Create.cshtml" />
+    <Content Include="Views\Cotizaciones\Delete.cshtml" />
+    <Content Include="Views\Cotizaciones\Details.cshtml" />
+    <Content Include="Views\Cotizaciones\Edit.cshtml" />
+    <Content Include="Views\Cotizaciones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402160103016_SecondMigration.resx">
       <DependentUpon>202402160103016_SecondMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403110240137_CRM.resx">
+      <DependentUpon>202403110240137_CRM.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
