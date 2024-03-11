@@ -131,6 +131,7 @@
     <Compile Include="Controllers\Clientes1Controller.cs" />
     <Compile Include="Controllers\CotizacionesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MovimientoCuentas1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -150,6 +151,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\Cotizaciones.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\MovimientoCuenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -219,6 +221,7 @@
     <Content Include="Views\Cotizaciones\Details.cshtml" />
     <Content Include="Views\Cotizaciones\Edit.cshtml" />
     <Content Include="Views\Cotizaciones\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

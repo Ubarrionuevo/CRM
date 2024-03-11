@@ -16,8 +16,14 @@ namespace WebadmiClient
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Login", action = "Login", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+    name: "Logout",
+    url: "Logout",
+    defaults: new { controller = "Login", action = "Logout" }
+);
         }
     }
 }
