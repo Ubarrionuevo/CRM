@@ -18,6 +18,13 @@ namespace WebadmiClient.Controllers
         // GET: MovimientoCuentas1
         public ActionResult Index()
         {
+            if (Session["Usuario"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
+
+
             return View(db.MovimientoCuenta.ToList());
         }
 

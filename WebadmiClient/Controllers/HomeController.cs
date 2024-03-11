@@ -10,7 +10,18 @@ namespace WebadmiClient.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+           
+                if (Session["Usuario"] == null)
+                {
+                return RedirectToAction("Login", "Login");
+            }
+
+            
+
+                // Lógica de la acción
+                return View();
+            
+           
         }
 
         public ActionResult About()

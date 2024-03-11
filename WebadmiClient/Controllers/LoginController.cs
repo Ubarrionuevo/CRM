@@ -18,29 +18,36 @@ namespace WebadmiClient.Controllers
         }
 
         // POST: /Account/Login
-        [HttpPost]
-        public ActionResult Login(Login usuario)
-        {
-            if (usuario.NombreUsuario == "usuario" && usuario.Contraseña == "contraseña")
+       
+            // Otras acciones del controlador...
+
+            [HttpPost]
+            public ActionResult Login(Login usuario)
             {
-                // Aquí podrías agregar la lógica para autenticar al usuario, como almacenar información en sesión
-                return RedirectToAction("Index", "Home"); // Redirigir al usuario a la página de inicio
+                // Lógica para autenticar al usuario
+                if (usuario.NombreUsuario == "usuario" && usuario.Contraseña == "contraseña")
+                {
+                    Session["Usuario"] = usuario.NombreUsuario;
+                    return RedirectToAction("Index", "Home"); // Redirigir al usuario a la página de inicio
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Nombre de usuario o contraseña incorrectos.");
+                    return View(usuario);
+                }
             }
-            else
-            {
-                ModelState.AddModelError("", "Nombre de usuario o contraseña incorrectos.");
-                return View(usuario);
-            }
-        }
+        
         [HttpGet]
         public ActionResult Logout()
         {
+
             // Aquí puedes agregar la lógica para cerrar la sesión del usuario
             // Por ejemplo:
-            // Session.Clear(); // Limpiar todos los datos de sesión
-            //Session.Abandon(); // Abandonar la sesión actual
+            Session.Clear();
+            Session.Abandon();
 
             return RedirectToAction("Login", "Login"); // Redirigir a la página de inicio de sesión
+           
         }
     }
 }

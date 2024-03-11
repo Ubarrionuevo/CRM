@@ -14,10 +14,22 @@ namespace WebadmiClient.Controllers
     public class CotizacionesController : Controller
     {
         private ApDbContext db = new ApDbContext();
+       
+            
 
-        // GET: Cotizaciones
-        public ActionResult Index()
+             
+    // GET: Cotizaciones
+    public ActionResult Index()
         {
+            if (Session["Usuario"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
+
+
+            // Lógica de la acción
+           
             return View(db.Cotizaciones.ToList());
         }
 
