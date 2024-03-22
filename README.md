@@ -9,6 +9,7 @@
   - [Features](#features)
   - [Status](#status)
   - [Contact](#contact)
+  - [Features](#features)
 
 
 
@@ -29,6 +30,16 @@
 * Entity Framework
 * MVC pattern
 * Unit Testing
+
+## Features
+* MVC (Model-View-Controller) app
+* Login/ model
+* 1 role: Admin
+* Paging and listing inventary,clients,quotes.
+* Checking authentication
+* Keeping all informations in local data base
+
+
 
 ## Status
 Project is: _completed_
