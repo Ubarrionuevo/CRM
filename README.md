@@ -5,7 +5,7 @@
 ## Table of contents
 - [CRM](#crm)
   - [Screenshots](#screenshots)
-  - [Technologies](#technologies/integrations)
+  - [Technologies](#technologies)
   - [Features](#features)
   - [Status](#status)
   - [Inspiration](#inspiration)
