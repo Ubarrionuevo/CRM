@@ -1,32 +1,83 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>@ViewBag.Title - GestorCliente</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-        <div class="container">
+        <div class="container" >
             @Html.ActionLink("GestorCliente", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+            <div class= "collapse navbar-collapse d-sm-inline-flex justify-content-between" >
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Inventario", "Index", "Clientes1", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("R.Clientes", "Index", "MovimientoCuentas1", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Cotizaciones", "Index", "Cotizaciones", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link", id = "inicio-link" })</li>
+                    <li>@Html.ActionLink("Inventario", "Index", "Clientes1", new { area = "" }, new { @class = "nav-link", id = "inventario-link" })</li>
+                    <li>@Html.ActionLink("R.Clientes", "Index", "MovimientoCuentas1", new { area = "" }, new { @class = "nav-link", id = "clientes-link" })</li>
+                    <li>@Html.ActionLink("Cotizaciones", "Index", "Cotizaciones", new { area = "" }, new { @class = "nav-link", id = "cotizaciones-link" })</li>
                 </ul>
                 </ul>
             </div>
         </div>
+
+
     </nav>
+    @*<script>
+        function habilitarEnlaces() {
+            document.getElementById('inicio-link').removeEventListener('click', bloquearEnlace);
+            document.getElementById('inventario-link').removeEventListener('click', bloquearEnlace);
+            document.getElementById('clientes-link').removeEventListener('click', bloquearEnlace);
+            document.getElementById('cotizaciones-link').removeEventListener('click', bloquearEnlace);
+        }
+
+        // Función para bloquear los enlaces
+        function bloquearEnlace() {
+            return false;
+        }
+
+        // Función para deshabilitar los enlaces
+        function deshabilitarEnlaces() {
+            document.getElementById('inicio-link').onclick = function () { return false; };
+            document.getElementById('inventario-link').onclick = function () { return false; };
+            document.getElementById('clientes-link').onclick = function () { return false; };
+            document.getElementById('cotizaciones-link').onclick = function () { return false; };
+        }
+
+
+        // Verificar si el usuario está autenticado (token JWT verificado)
+        var usuarioAutenticado = false; // Inicialmente el usuario no está autenticado
+
+        // Obtener el token JWT del almacenamiento local o de una cookie
+        var tokenJWT = localStorage.getItem('tokenJWT'); // Cambia 'tokenJWT' al nombre que uses para tu token
+
+        // Verificar si el token JWT es válido (puedes usar alguna librería como jwt-decode)
+        if (tokenJWT) {
+            // Verificar el token JWT para asegurarse de que es válido
+            // Si el token es válido, marcar al usuario como autenticado
+            usuarioAutenticado = true;
+        }
+
+        // Función para manejar la lógica de autenticación
+        function manejarAutenticacion() {
+            if (usuarioAutenticado) {
+                habilitarEnlaces(); // Si el usuario está autenticado, habilitar los enlaces
+            } else {
+                deshabilitarEnlaces(); // Si el usuario no está autenticado, deshabilitar los enlaces
+            }
+        }
+
+        // Llamar a la función para manejar la autenticación al cargar la página
+        manejarAutenticacion();
+    </script>*@
     <div class="container body-content">
         @RenderBody()
         <hr />

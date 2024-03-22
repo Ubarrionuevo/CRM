@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebadmiClient", "WebadmiClient\WebadmiClient.csproj", "{BE7D4337-EB6E-4F76-B3E4-816B572C8A72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirsTest", "FirsTest\FirsTest.csproj", "{2495CBC6-8C6D-43AB-A3F7-AE64E7BF4058}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BE7D4337-EB6E-4F76-B3E4-816B572C8A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE7D4337-EB6E-4F76-B3E4-816B572C8A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE7D4337-EB6E-4F76-B3E4-816B572C8A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2495CBC6-8C6D-43AB-A3F7-AE64E7BF4058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2495CBC6-8C6D-43AB-A3F7-AE64E7BF4058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2495CBC6-8C6D-43AB-A3F7-AE64E7BF4058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2495CBC6-8C6D-43AB-A3F7-AE64E7BF4058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

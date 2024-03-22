@@ -21,12 +21,7 @@ namespace WebadmiClient.Controllers
     // GET: Cotizaciones
     public ActionResult Index()
         {
-            if (Session["Usuario"] == null)
-            {
-                return RedirectToAction("Login", "Login");
-            }
-
-
+          
 
             // Lógica de la acción
            
@@ -70,7 +65,7 @@ namespace WebadmiClient.Controllers
 
             return View(cotizaciones);
         }
-
+      
         // GET: Cotizaciones/Edit/5
         public ActionResult Edit(int? id)
         {

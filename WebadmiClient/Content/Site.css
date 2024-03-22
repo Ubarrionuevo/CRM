@@ -18,3 +18,14 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Content/site.css */
+
+.disabled-link {
+    pointer-events: none;
+    color: gray; /* Opcional: Cambia el color de los enlaces deshabilitados */
+}
+
+
+
+

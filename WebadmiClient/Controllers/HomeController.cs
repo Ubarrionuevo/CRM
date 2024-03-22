@@ -10,21 +10,11 @@ namespace WebadmiClient.Controllers
     {
         public ActionResult Index()
         {
-           
-                if (Session["Usuario"] == null)
-                {
-                return RedirectToAction("Login", "Login");
-            }
-
-            
-
-                // Lógica de la acción
-                return View();
-            
-           
+            return View();
         }
+         
 
-        public ActionResult About()
+    public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 

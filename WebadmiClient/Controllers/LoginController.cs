@@ -10,34 +10,44 @@ namespace WebadmiClient.Controllers
 
     public class LoginController : Controller
     {
-        // GET: /Account/Login
+       
         [HttpGet]
         public ActionResult Login()
         {
+
             return View();
         }
 
-        // POST: /Account/Login
-       
-            // Otras acciones del controlador...
-
-            [HttpPost]
-            public ActionResult Login(Login usuario)
+        [HttpPost]
+        public ActionResult Login(string NombreUsuario, string Contraseña)
+        {
+            // Verificar las credenciales del usuario
+            if (NombreUsuario == "usuario" && Contraseña == "contrasena")
             {
-                // Lógica para autenticar al usuario
-                if (usuario.NombreUsuario == "usuario" && usuario.Contraseña == "contraseña")
-                {
-                    Session["Usuario"] = usuario.NombreUsuario;
-                    return RedirectToAction("Index", "Home"); // Redirigir al usuario a la página de inicio
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Nombre de usuario o contraseña incorrectos.");
-                    return View(usuario);
-                }
+                // Usuario autenticado, generar un token JWT
+                string token = JwtUtils.GenerateToken(NombreUsuario);
+                
+                // Agregar el token a las cookies o enviarlo en la respuesta (según tus necesidades)
+
+                // Redirigir a la página principal u otra página protegida
+
+                return RedirectToAction("Index", "Home");
+                
             }
-        
-        [HttpGet]
+            else
+            {
+                // Credenciales incorrectas, mostrar un mensaje de error
+                ViewBag.ErrorMessage = "Credenciales incorrectas.";
+                return View();
+            }
+
+          
+
+            
+        }
+    
+
+    [HttpGet]
         public ActionResult Logout()
         {
 

@@ -10,10 +10,10 @@ namespace WebadmiClient
         public DbSet<MovimientoCuenta> MovimientoCuenta { get; set; }
 
 
-        
-        public ApDbContext():base("name=DefaultConnection")
+
+        public ApDbContext() : base("name=DefaultConnection")
         {
-            
+
         }
 
         public System.Data.Entity.DbSet<WebadmiClient.Models.Cotizaciones> Cotizaciones { get; set; }

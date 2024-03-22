@@ -3,21 +3,52 @@
 }
 
 <main>
-        <section class="row" aria-labelledby="aspnetTitle" class="align-items-center">
-            <h1 id="title" class="text-center pt-2">Gestion Clientes</h1>
-            <h3 class="lead text-center">Registro y gestion de clientes</h3>
-            <a href="@Url.Action("Logout", "Login")">Cerrar Sesión</a>
+    <section class="row" aria-labelledby="aspnetTitle" class="align-items-center">
+        <h1 id="title" class="text-center pt-2">Gestion Clientes</h1>
+        <h3 class="lead text-center">Registro y gestion de clientes</h3>
+    </section>
+    <div class="text-center">
+        <a class=" mt-3 btn btn-primary " href="@Url.Action("Logout", "Login")">Cerrar Sesión</a>
+    </div>
+    
+
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
         </section>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+        </section>
+    </div>
 
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
 
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
 
-            </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
 
-            </section>
-        </div>
-    </main>
+    <script>
+        // Función para habilitar los enlaces y botones
+        function enableLinksAndButtons() {
+            // Habilitar todos los enlaces
+            var links = document.getElementsByTagName("a");
+            for (var i = 0; i < links.length; i++) {
+                links[i].onclick = null;
+            }
+
+            // Habilitar todos los botones
+            var buttons = document.getElementsByTagName("button");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = null;
+                buttons[i].disabled = false;
+            }
+
+            // Habilitar todos los elementos de entrada (input)
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].disabled = false;
+            }
+        }
+
+        // Llama a la función para habilitar enlaces y botones cuando la página se carga
+        window.onload = enableLinksAndButtons;
+    </script>
+</main>

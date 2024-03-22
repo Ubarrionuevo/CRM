@@ -18,7 +18,7 @@ namespace WebadmiClient.Models
         [Required]
         [StringLength(50)]
         public string ClienteDireccion { get; set; }
-        [Required]
+        
         public DateTime Fecha { get; set; }
         [Required]
         public decimal Total { get; set; }
