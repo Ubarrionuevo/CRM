@@ -5,8 +5,7 @@
 ## Table of contents
 - [CRM](#crm)
   - [Screenshots](#screenshots)
-  - [Technologies](#technologies)
-  - [Setup](#setup)
+  - [Technologies](#technologies/integrations)
   - [Features](#features)
   - [Status](#status)
   - [Inspiration](#inspiration)
@@ -15,14 +14,14 @@
 
 
 
-** Screenshots **
+## Screenshots 
 ![Login](/img/login.png)
 ![Pantalla Principal](/img/pantallaprincipal.png)
 ![inventario](/img/inventario.png)
 ![Cotizaciones](/img/cotizaciones.png)
 ![Clientes](/img/Clientes.png)
 
-## Technologies / Integrations
+## Technologies/Integrations
 * C#
 *.NET 4.7
 * Code First (for database implementation)
