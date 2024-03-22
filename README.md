@@ -4,7 +4,7 @@
 
 ## Table of contents
 - [CRM](#crm)
-  - [Screenshots](#Screenshots)
+  - [Screenshots](#screenshots)
   - [Technologies](#technologies)
   - [Setup](#setup)
   - [Features](#features)
