@@ -8,7 +8,6 @@
   - [Technologies](#technologies)
   - [Features](#features)
   - [Status](#status)
-  - [Inspiration](#inspiration)
   - [Contact](#contact)
 
 
