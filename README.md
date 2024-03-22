@@ -21,7 +21,7 @@
 ![Cotizaciones](/img/cotizaciones.png)
 ![Clientes](/img/Clientes.png)
 
-## Technologies/Integrations
+## Technologies
 * C#
 *.NET 4.7
 * Code First (for database implementation)
