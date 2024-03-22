@@ -10,4 +10,10 @@ User repository
 VueJs (Front)
 
 ** Screenshot **
-![Texto alternativo](/img/login.png)
+![Login](/img/login.png)
+![Pantalla Principal](/img/pantallaprincipal.png)
+![inventario](/img/inventario.png)
+![Pantalla Principal](/img/pantallaprincipal.png)
+![Cotizaciones](/img/cotizaciones.png)
+![Clientes](/img/Clientes.png)
+
