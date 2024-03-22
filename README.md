@@ -8,4 +8,4 @@ Drivers and models (for backend management)
 MVC pattern
 User repository
 VueJs (Front)
-(/img/Login.png)
+![Texto alternativo](/img/login.jpg)
