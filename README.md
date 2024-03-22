@@ -25,13 +25,11 @@
 * C#
 *.NET 4.7
 * Code First (for database implementation)
-* Sql Server (Database)
-* Reinforcement strap (front)
-* Entity Framework (For database migration and integration)
-* Drivers and models (for backend management)
+* Sql Server 
+* Bootstrap
+* Entity Framework
 * MVC pattern
-* VueJs (Front)
-* *Unit Testing
+* Unit Testing
 
 ## Status
 Project is: _completed_
